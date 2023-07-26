@@ -29,7 +29,9 @@
       tailwind.config = {
         theme: {
           extend: {
-            colors: {},
+            colors: {
+              // black: "#121212",
+            },
           },
         },
       };
@@ -42,9 +44,9 @@
   </head>
   <body class="font-lato">
     <!-- header section start -->
-    <header class="w-11/12 mx-auto px-3 md:px-10">
+    <header class="w-11/12 mx-auto px-3 md:px-12">
       <div
-        class="navbar bg-base-100 flex justify-between my-12 px-6 py-3 bg-[#F85559] text-white rounded-full"
+        class="navbar flex justify-between my-8 px-6 py-3 bg-[#F85559] text-white rounded-full"
       >
         <div class="hidden lg:flex">
           <ul class="menu menu-horizontal px-1">
@@ -76,8 +78,11 @@
 
     <!-- main section -->
     <main class="w-11/12 mx-auto pb-5 px-4 md:px-12">
+      <!-- banner section -->
       <section class="relative">
-        <div class="carousel w-full h-60 md:h-72 lg:h-full bg-[#121212]">
+        <div
+          class="carousel w-full h-60 md:h-72 lg:h-full bg-[#121212] rounded-md"
+        >
           <div id="slide1" class="carousel-item relative w-full">
             <img src="./images/banner1.png" class="w-full opacity-70" />
             <div
@@ -127,6 +132,362 @@
             >
               Shop Now
             </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- deal of the day section -->
+      <section class="my-10 py-5">
+        <div class="flex flex-col lg:flex-row justify-between items-center">
+          <div class="lg:max-w-xl flex flex-col text-center lg:text-start mb-5">
+            <h1 class="text-5xl font-extrabold mb-5 text-black-700">
+              Deal of the Day
+            </h1>
+            <p class="text-gray-500">
+              Contrary to popular belief, is not simply random text. It has
+              roots in a piece of classical Latin literature from 45 BC, making
+              it over 2000 years old.
+            </p>
+          </div>
+          <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+            <div class="flex flex-col">
+              <span class="countdown font-mono text-5xl">
+                <span style="--value: 29"></span>
+              </span>
+              <span class="text-gray-500"> Days</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="countdown font-mono text-5xl">
+                <span style="--value: 15"></span>
+              </span>
+              <span class="text-gray-500"> Hours</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="countdown font-mono text-5xl">
+                <span style="--value: 25" class=""></span>
+              </span>
+              <span class="text-gray-500"> Minutes</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="countdown font-mono text-5xl">
+                <span style="--value: 08"></span>
+              </span>
+              <span class="text-gray-500"> seconds</span>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
+          <div class="card h-auto shadow-xl">
+            <figure class="px-10 pt-10">
+              <img src="/images/fruit6.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title font-semibold text-black-700">
+                12.90$ - 18.85$
+              </h2>
+              <hr class="w-full my-5" />
+              <p class="text-gray-500">Apples</p>
+
+              <div class="flex flex-col">
+                <div class="rating rating-lg rating-half mt-5 mb-6">
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="rating-hidden rating-half"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                    checked
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                  />
+                </div>
+                <a href="" class="text-[#F85559] font-semibold">Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="card h-auto shadow-xl">
+            <figure class="px-10 pt-10">
+              <img src="/images/fruit7.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title font-semibold text-back-700">
+                12.90$ - 18.85$
+              </h2>
+              <hr class="w-full my-5" />
+              <p class="text-gray-500">Orange</p>
+
+              <div class="flex flex-col">
+                <div class="rating rating-lg rating-half mt-5 mb-6">
+                  <input type="radio" name="rating-10" class="rating-hidden" />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                    checked
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                  />
+                </div>
+                <a href="" class="text-[#F85559] font-semibold">Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="card h-auto shadow-xl">
+            <figure class="px-10 pt-10">
+              <img src="/images/fruit8.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title font-semibold text-back-700">
+                12.90$ - 18.85$
+              </h2>
+              <hr class="w-full my-5" />
+              <p class="text-gray-500">Red Dragon</p>
+
+              <div class="flex flex-col">
+                <div class="rating rating-lg rating-half mt-5 mb-6">
+                  <input type="radio" name="rating-10" class="rating-hidden" />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                    checked
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                  />
+                </div>
+                <a href="" class="text-[#F85559] font-semibold">Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="card h-auto shadow-xl">
+            <figure class="px-10 pt-10">
+              <img src="/images/fruit9.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title font-semibold text-black-700">
+                12.90$ - 18.85$
+              </h2>
+              <hr class="w-full my-5" />
+              <p class="text-gray-500">Banana</p>
+
+              <div class="flex flex-col">
+                <div class="rating rating-lg rating-half mt-5 mb-6">
+                  <input type="radio" name="rating-10" class="rating-hidden" />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                    checked
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-1"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-10"
+                    class="bg-[#F85559] mask mask-star-2 mask-half-2"
+                  />
+                </div>
+                <a href="" class="text-[#F85559] font-semibold">Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="my-10 flex justify-center items-center">
+          <button
+            class="py-2 px-3 md:py-3 md:px-4 lg:py-5 lg:px-6 rounded-md bg-[#F85559] text-white"
+          >
+            Shop Now
+          </button>
+        </div>
+      </section>
+
+      <!-- meet the team section -->
+      <section>
+        <div
+          class="hero h-[500px]"
+          style="background-image: url(./images/banner1.png)"
+        >
+          <div class="hero-overlay bg-opacity-60"></div>
+          <div class="hero-content text-center text-neutral-content">
+            <div class="max-w-md">
+              <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+              <p class="mb-5">
+                Provident cupiditate voluptatem et in. Quaerat fugiat ut
+                assumenda excepturi exercitationem quasi. In deleniti eaque aut
+                repudiandae et a id nisi.
+              </p>
+              <button class="btn btn-primary">Get Started</button>
+            </div>
           </div>
         </div>
       </section>
