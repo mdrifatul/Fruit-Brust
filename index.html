@@ -44,12 +44,41 @@
   </head>
   <body class="font-lato">
     <!-- header section start -->
-    <header class="w-11/12 mx-auto px-3 md:px-12">
+    <header class="w-11/12 mx-auto md:px-12">
       <div
-        class="navbar flex justify-between my-8 px-6 py-3 bg-[#F85559] text-white rounded-full"
+        class="navbar flex justify-between my-8 md:px-6 py-3 md:bg-[#F85559] md:text-white rounded-full"
       >
+        <!-- dropdown  -->
+        <div class="lg:hidden dropdown">
+          <label tabindex="0" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </label>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-32 text-black"
+          >
+            <li><a>Home</a></li>
+            <li><a>About Us</a></li>
+            <li><a>Shop</a></li>
+            <li><a>All Fruits</a></li>
+          </ul>
+        </div>
+        <!-- dropdown end -->
         <div class="hidden lg:flex">
-          <ul class="menu menu-horizontal px-1">
+          <ul class="menu dropdown-end menu-horizontal px-1">
             <li><a>Home</a></li>
             <li><a>About Us</a></li>
             <li><a>Shop</a></li>
@@ -60,7 +89,8 @@
           <img src="./images/logo.png" alt="" class="h-12" />
           <a class="text-3xl normal-case font-extrabold">Fruit Burst</a>
         </div>
-        <div class="hidden relative">
+
+        <div class="hidden lg:block relative">
           <input
             type="text"
             placeholder="Search"
@@ -77,7 +107,7 @@
     </header>
 
     <!-- main section -->
-    <main class="w-11/12 mx-auto pb-5 px-4 md:px-12">
+    <main class="w-11/12 mx-auto pb-5 md:px-12">
       <!-- banner section -->
       <section class="relative">
         <div
@@ -134,12 +164,37 @@
             </button>
           </div>
         </div>
+
+        <div class="w-4/5 m-auto rounded-lg hidden lg:block">
+          <div
+            class="relative grid grid-flow-col py-10 px-16 bg-white -top-20 shadow-lg rounded-lg"
+          >
+            <div class="mx-auto">
+              <img src="./images/fruit1.png" alt="" />
+              <p class="text-center">Strawberry</p>
+            </div>
+            <div class="mx-auto">
+              <img src="./images/fruit2.png" alt="" />
+              <p class="text-center">Strawberry</p>
+            </div>
+            <div class="mx-auto">
+              <img src="./images/fruit3.png" alt="" />
+              <p class="text-center">Strawberry</p>
+            </div>
+            <div class="mx-auto">
+              <img src="./images/fruit4.png" alt="" />
+              <p class="text-center">Strawberry</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- deal of the day section -->
-      <section class="my-10 py-5">
-        <div class="flex flex-col lg:flex-row justify-between items-center">
-          <div class="lg:max-w-xl flex flex-col text-center lg:text-start mb-5">
+      <section class="my-8">
+        <div
+          class="flex flex-col lg:flex-row justify-between items-center py-5 gap-5"
+        >
+          <div class="lg:max-w-xl flex flex-col text-center lg:text-start">
             <h1 class="text-5xl font-extrabold mb-5 text-black-700">
               Deal of the Day
             </h1>
@@ -151,25 +206,40 @@
           </div>
           <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
             <div class="flex flex-col">
-              <span class="countdown font-mono text-5xl">
+              <span class="countdown font-mono text-5xl font-extrabold">
                 <span style="--value: 29"></span>
               </span>
               <span class="text-gray-500"> Days</span>
             </div>
+            <div>
+              <i
+                class="fa-solid fa-ellipsis-vertical text-black-700 text-3xl relative top-2"
+              ></i>
+            </div>
             <div class="flex flex-col">
-              <span class="countdown font-mono text-5xl">
+              <span class="countdown font-mono text-5xl font-extrabold">
                 <span style="--value: 15"></span>
               </span>
               <span class="text-gray-500"> Hours</span>
             </div>
+            <div>
+              <i
+                class="fa-solid fa-ellipsis-vertical text-black-700 text-3xl relative top-2"
+              ></i>
+            </div>
             <div class="flex flex-col">
-              <span class="countdown font-mono text-5xl">
+              <span class="countdown font-mono text-5xl font-extrabold">
                 <span style="--value: 25" class=""></span>
               </span>
               <span class="text-gray-500"> Minutes</span>
             </div>
+            <div>
+              <i
+                class="fa-solid fa-ellipsis-vertical text-black-700 text-3xl relative top-2"
+              ></i>
+            </div>
             <div class="flex flex-col">
-              <span class="countdown font-mono text-5xl">
+              <span class="countdown font-mono text-5xl font-extrabold">
                 <span style="--value: 08"></span>
               </span>
               <span class="text-gray-500"> seconds</span>
@@ -177,9 +247,9 @@
           </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
-          <div class="card h-auto shadow-xl">
+          <div class="card h-auto shadow-xl border border-gray-200">
             <figure class="px-10 pt-10">
-              <img src="/images/fruit6.png" alt="Shoes" class="rounded-xl" />
+              <img src="./images/fruit6.png" alt="Shoes" class="rounded-xl" />
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title font-semibold text-black-700">
@@ -251,9 +321,9 @@
               </div>
             </div>
           </div>
-          <div class="card h-auto shadow-xl">
+          <div class="card h-auto shadow-xl border border-gray-200">
             <figure class="px-10 pt-10">
-              <img src="/images/fruit7.png" alt="Shoes" class="rounded-xl" />
+              <img src="./images/fruit7.png" alt="Shoes" class="rounded-xl" />
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title font-semibold text-back-700">
@@ -321,9 +391,9 @@
               </div>
             </div>
           </div>
-          <div class="card h-auto shadow-xl">
+          <div class="card h-auto shadow-xl border border-gray-200">
             <figure class="px-10 pt-10">
-              <img src="/images/fruit8.png" alt="Shoes" class="rounded-xl" />
+              <img src="./images/fruit8.png" alt="Shoes" class="rounded-xl" />
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title font-semibold text-back-700">
@@ -391,9 +461,9 @@
               </div>
             </div>
           </div>
-          <div class="card h-auto shadow-xl">
+          <div class="card h-auto shadow-xl border border-gray-200">
             <figure class="px-10 pt-10">
-              <img src="/images/fruit9.png" alt="Shoes" class="rounded-xl" />
+              <img src="./images/fruit9.png" alt="Shoes" class="rounded-xl" />
             </figure>
             <div class="card-body items-center text-center">
               <h2 class="card-title font-semibold text-black-700">
@@ -472,28 +542,301 @@
       </section>
 
       <!-- meet the team section -->
-      <section>
+      <section class="mb-10">
         <div
-          class="hero h-[500px]"
+          class="hero min-h-screen rounded-md bg-no-repeat"
           style="background-image: url(./images/banner1.png)"
         >
-          <div class="hero-overlay bg-opacity-60"></div>
-          <div class="hero-content text-center text-neutral-content">
-            <div class="max-w-md">
-              <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
-              <p class="mb-5">
-                Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                assumenda excepturi exercitationem quasi. In deleniti eaque aut
-                repudiandae et a id nisi.
-              </p>
-              <button class="btn btn-primary">Get Started</button>
+          <div class="hero-overlay bg-opacity-60 rounded-md"></div>
+          <div class="">
+            <div class="hero-content text-center text-neutral-content mb-10">
+              <div class="lg:w-[600px]">
+                <h1 class="text-3xl lg:text-5xl font-extrabold text-white">
+                  Meet the team section
+                </h1>
+
+                <p class="mt-5 text-white">
+                  Contrary to popular belief, is not simply random text. It has
+                  roots in a piece of classical Latin literature from 45 BC,
+                  making it over 2000 years old.
+                </p>
+              </div>
+            </div>
+
+            <div class="m-auto">
+              <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-10"
+              >
+                <div class="text-center text-white mb-5">
+                  <div class="flex justify-center">
+                    <img
+                      src="./images/member1.png"
+                      alt="aslad"
+                      class="mb-5 w-28"
+                    />
+                  </div>
+
+                  <h1 class="text-2xl font-semibold">Awlad Hossain</h1>
+                  <p class="mb-3">Fruits Expert</p>
+                  <div class="">
+                    <i
+                      class="fa-brands fa-facebook-f bg-[#F85559] py-1 px-2 rounded-full mr-2"
+                      style="color: #ffffff"
+                    ></i>
+                    <i
+                      class="fa-brands fa-twitter bg-[#F85559] p-1 rounded-full mr-2"
+                      style="color: #ffffff"
+                    ></i>
+                    <i
+                      class="fa-brands fa-linkedin-in bg-[#F85559] p-1 rounded-full"
+                      style="color: #ffffff"
+                    ></i>
+                  </div>
+                </div>
+
+                <div class="text-center text-white mb-5">
+                  <div class="flex justify-center">
+                    <img
+                      src="./images/member2.png"
+                      alt="aslad"
+                      class="mb-5 w-28"
+                    />
+                  </div>
+                  <h1 class="text-2xl font-semibold">Safia Chowdhury</h1>
+                  <p class="mb-3">Fruits Expert</p>
+                  <div class="">
+                    <i
+                      class="fa-brands fa-facebook-f bg-[#F85559] py-1 px-2 rounded-full mr-2"
+                      style="color: #ffffff"
+                    ></i>
+                    <i
+                      class="fa-brands fa-twitter bg-[#F85559] p-1 rounded-full mr-2"
+                      style="color: #ffffff"
+                    ></i>
+                    <i
+                      class="fa-brands fa-linkedin-in bg-[#F85559] p-1 rounded-full"
+                      style="color: #ffffff"
+                    ></i>
+                  </div>
+                </div>
+
+                <div class="text-center text-white mb-5">
+                  <div class="flex justify-center">
+                    <img
+                      src="./images/member3.png"
+                      alt="aslad"
+                      class="mb-5 w-28"
+                    />
+                  </div>
+                  <h1 class="text-2xl font-semibold">Rokib Hossain</h1>
+                  <p class="mb-3">Fruits Expert</p>
+                  <div class="">
+                    <i
+                      class="fa-brands fa-facebook-f bg-[#F85559] py-1 px-2 rounded-full mr-2"
+                      style="color: #ffffff"
+                    ></i>
+                    <i
+                      class="fa-brands fa-twitter bg-[#F85559] p-1 rounded-full mr-2"
+                      style="color: #ffffff"
+                    ></i>
+                    <i
+                      class="fa-brands fa-linkedin-in bg-[#F85559] p-1 rounded-full"
+                      style="color: #ffffff"
+                    ></i>
+                  </div>
+                </div>
+
+                <div class="text-center text-white mb-5">
+                  <div class="flex justify-center">
+                    <img
+                      src="./images/member4.png"
+                      alt="aslad"
+                      class="mb-5 w-28"
+                    />
+                  </div>
+                  <h1 class="text-2xl font-semibold">Chaity</h1>
+                  <p class="mb-3">Fruits Expert</p>
+                  <div class="">
+                    <i
+                      class="fa-brands fa-facebook-f bg-[#F85559] py-1 px-2 rounded-full mr-2"
+                      style="color: #ffffff"
+                    ></i>
+                    <i
+                      class="fa-brands fa-twitter bg-[#F85559] p-1 rounded-full mr-2"
+                      style="color: #ffffff"
+                    ></i>
+                    <i
+                      class="fa-brands fa-linkedin-in bg-[#F85559] p-1 rounded-full"
+                      style="color: #ffffff"
+                    ></i>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
+      <!-- choose section start -->
+
+      <section class="my-10">
+        <div class="mx-auto text-center w-3/5">
+          <h1 class="text-5xl font-extrabold py-5">Why Choose US</h1>
+          <p class="text-gray-500">
+            Contrary to popular belief, is not simply random text. It has roots
+            in a piece of classical Latin literature from 45 BC, making it over
+            2000 years old.
+          </p>
+        </div>
+        <div class="my-10 grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <div class="">
+            <div class="flex w-96 mb-5 gap-4">
+              <i
+                class="fa-solid fa-people-group h-14 text-2xl w-14 p-5 rounded-full bg-gray-400 flex justify-center items-center"
+                style="color: #ffffff"
+              ></i>
+              <div>
+                <h1 class="text-2xl font-extrabold">Dedicated Team</h1>
+                <hr class="w-1/3 my-3" />
+                <p class="text-gray-500">
+                  Professional employees are there for you to pick the most
+                  amazing and fresh fruits.
+                </p>
+              </div>
+            </div>
+            <div class="flex w-96 mb-5 gap-4">
+              <i
+                class="fa-regular fa-heart text-2xl h-14 w-14 p-5 rounded-full bg-gray-400 flex justify-center items-center"
+                style="color: #ffffff"
+              ></i>
+              <div>
+                <h1 class="text-2xl font-extrabold">Fresh is Best</h1>
+                <hr class="w-1/3 my-3" />
+                <p class="text-gray-500">
+                  Professional employees are there for you to pick the most
+                  amazing and fresh fruits.
+                </p>
+              </div>
+            </div>
+            <div class="flex w-96 gap-4">
+              <i
+                class="fa-solid fa-gift h-14 text-2xl w-14 p-5 rounded-full bg-gray-400 flex justify-center items-center"
+                style="color: #ffffff"
+              ></i>
+              <div>
+                <h1 class="text-2xl font-extrabold">Gift Certificates</h1>
+                <hr class="w-1/3 my-3" />
+                <p class="text-gray-500">
+                  Professional employees are there for you to pick the most
+                  amazing and fresh fruits.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <img
+              src="./images/whychoose1.png"
+              alt=""
+              class="min-h-full w-auto"
+            />
+          </div>
+          <div class="">
+            <div class="flex w-96 mb-5 gap-4">
+              <div class="text-right">
+                <h1 class="text-2xl font-extrabold">Integrated Supplier</h1>
+                <div class="flex justify-end">
+                  <hr class="w-1/3 my-3" />
+                </div>
+                <p class="text-gray-500">
+                  Professional employees are there for you to pick the most
+                  amazing and fresh fruits.
+                </p>
+              </div>
+              <i
+                class="fa-regular fa-lemon h-14 w-14 text-2xl p-5 rounded-full bg-gray-400 flex justify-center items-center"
+                style="color: #ffffff"
+              ></i>
+            </div>
+            <div class="flex w-96 mb-5 gap-4">
+              <div class="text-right">
+                <h1 class="text-2xl font-extrabold">Sustainable Practice</h1>
+                <div class="flex justify-end">
+                  <hr class="w-1/3 my-3" />
+                </div>
+                <p class="text-gray-500">
+                  Professional employees are there for you to pick the most
+                  amazing and fresh fruits.
+                </p>
+              </div>
+              <i
+                class="fa-solid fa-ice-cream text-2xl h-14 w-14 p-5 rounded-full bg-gray-400 flex justify-center items-center"
+                style="color: #ffffff"
+              ></i>
+            </div>
+            <div class="flex w-96 gap-4">
+              <div class="text-right">
+                <h1 class="text-2xl font-extrabold">The Benefits Only</h1>
+                <div class="flex justify-end">
+                  <hr class="w-1/3 my-3" />
+                </div>
+                <p class="text-gray-500">
+                  Professional employees are there for you to pick the most
+                  amazing and fresh fruits.
+                </p>
+              </div>
+              <i
+                class="fa-regular fa-thumbs-up h-14 w-14 p-5 rounded-full bg-gray-400 flex justify-center items-center"
+                style="color: #ffffff"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- choose section end -->
     </main>
 
     <!-- footer section -->
-    <footer></footer>
+    <footer
+      class="footer footer-center p-10 py-20 bg-black text-base-content rounded"
+    >
+      <div class="gap-4 flex justify-center">
+        <img src="./images/logo.png" alt="" class="h-12" />
+        <a class="text-3xl normal-case font-extrabold text-white"
+          >Fruit Burst</a
+        >
+      </div>
+      <div
+        class="flex flex-wrap items-center justify-center gap-8 md:gap-14 text-white"
+      >
+        <a class="link link-hover">Home</a>
+        <a class="link link-hover">About us</a>
+        <a class="link link-hover">Shop</a>
+        <a class="link link-hover">All Fruits</a>
+        <a class="link link-hover">Support</a>
+        <a class="link link-hover">My Account</a>
+      </div>
+      <div>
+        <div class="grid grid-flow-col gap-6 md:gap-10">
+          <a
+            ><i
+              class="fa-brands fa-facebook-f bg-white px-3 py-1 rounded-full mr-2 text-2xl"
+              style="color: #0958b2"
+            ></i
+          ></a>
+          <a
+            ><i
+              class="fa-brands fa-twitter bg-white px-2 py-1 rounded-full mr-2 text-2xl"
+              style="color: #12cde6"
+            ></i
+          ></a>
+          <a
+            ><i
+              class="fa-brands fa-linkedin-in bg-white px-2 py-1 rounded-full text-2xl"
+              style="color: #0d7dc7"
+            ></i
+          ></a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
